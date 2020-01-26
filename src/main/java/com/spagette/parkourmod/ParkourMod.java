@@ -2,6 +2,8 @@ package com.spagette.parkourmod;
 
 import com.spagette.parkourmod.blocks.ModBlocks;
 import com.spagette.parkourmod.blocks.TestBlock;
+import com.spagette.parkourmod.items.ModItems;
+import com.spagette.parkourmod.items.TestItem;
 import com.spagette.parkourmod.setup.ClientProxy;
 import com.spagette.parkourmod.setup.IProxy;
 import com.spagette.parkourmod.setup.ModSetup;
@@ -9,6 +11,7 @@ import com.spagette.parkourmod.setup.ServerProxy;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
@@ -53,11 +56,12 @@ public class ParkourMod
 
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event){
-            Item.Properties properties = new Item.Properties()
+            Item.Properties testBlockProperties = new Item.Properties()
                     .group(setup.itemGroup);
 
-            event.getRegistry().register(new BlockItem(ModBlocks.TESTBLOCK, properties).setRegistryName("testblock"));
+            event.getRegistry().register(new BlockItem(ModBlocks.TESTBLOCK, testBlockProperties).setRegistryName("testblock"));
             LOGGER.info("TestBlock item registered");
+            event.getRegistry().register(new TestItem());
         }
     }
 }

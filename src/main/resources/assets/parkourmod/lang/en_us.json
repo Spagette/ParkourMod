@@ -1,5 +1,6 @@
 {
   "block.parkourmod.testblock": "TestBlock",
+  "item.parkourmod.testitem": "TestItem",
 
   "_comment": "Creative Tabs",
   "itemGroup.parkourmod": "TestBlock"
