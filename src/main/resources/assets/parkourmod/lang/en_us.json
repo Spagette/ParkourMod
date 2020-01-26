@@ -1,8 +1,7 @@
 {
-  "block.parkourmod.testblock": "TestBlock",
-  "item.parkourmod.testitem": "TestItem",
+  "item.parkourmod.parkourboots": "Parkour Boots",
 
   "_comment": "Creative Tabs",
-  "itemGroup.parkourmod": "TestBlock"
+  "itemGroup.parkourmod": "ParkourMod"
 
 }
