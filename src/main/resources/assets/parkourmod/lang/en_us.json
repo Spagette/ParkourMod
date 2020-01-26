@@ -1,0 +1,7 @@
+{
+  "block.parkourmod.testblock": "TestBlock",
+
+  "_comment": "Creative Tabs",
+  "itemGroup.parkourmod": "TestBlock"
+
+}
