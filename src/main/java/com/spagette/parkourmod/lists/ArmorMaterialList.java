@@ -10,6 +10,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 
 public enum ArmorMaterialList implements IArmorMaterial {
+
     parkour("parkour", 400, new int[] {8,10,9,7}, 25, ModItems.PARKOURBOOTS, "entity.egg.throw", 0);
 
     private static final int[] max_damage_array = new int[]{13,15,16,11};
@@ -20,6 +21,7 @@ public enum ArmorMaterialList implements IArmorMaterial {
     private float toughness;
 
     private ArmorMaterialList(String name, int durability, int[] damageReductionAmounts, int enchantability, Item repairItem, String equipSound, float toughness){
+
         this.name = name;
         this.durability = durability;
         this.damageReductionAmounts = damageReductionAmounts;
@@ -31,36 +33,43 @@ public enum ArmorMaterialList implements IArmorMaterial {
 
     @Override
     public int getDurability(EquipmentSlotType slot) {
+
         return this.damageReductionAmounts[slot.getIndex()];
     }
 
     @Override
     public int getDamageReductionAmount(EquipmentSlotType slot) {
+
         return max_damage_array[slot.getIndex()] * this.durability;
     }
 
     @Override
     public int getEnchantability() {
+
         return this.enchantability;
     }
 
     @Override
     public SoundEvent getSoundEvent() {
+
         return new SoundEvent(new ResourceLocation(equipSound));
     }
 
     @Override
     public Ingredient getRepairMaterial() {
+
         return Ingredient.fromItems(this.repairItem);
     }
 
     @Override
     public String getName() {
+
         return ParkourMod.modid + ":" + this.name;
     }
 
     @Override
     public float getToughness() {
+
         return this.toughness;
     }
 }
