@@ -1,7 +1,6 @@
 package com.spagette.parkourmod;
 
 import com.spagette.parkourmod.items.ParkourBoots;
-import com.spagette.parkourmod.lists.ArmorMaterialList;
 import com.spagette.parkourmod.setup.ClientProxy;
 import com.spagette.parkourmod.setup.IProxy;
 import com.spagette.parkourmod.setup.ModSetup;
