@@ -1,17 +1,17 @@
 package com.spagette.parkourmod;
 
+import com.spagette.parkourmod.handler.ClientHandler;
 import com.spagette.parkourmod.items.ParkourBoots;
+import com.spagette.parkourmod.network.ParkourModPacketHandler;
 import com.spagette.parkourmod.setup.ClientProxy;
 import com.spagette.parkourmod.setup.IProxy;
 import com.spagette.parkourmod.setup.ModSetup;
 import com.spagette.parkourmod.setup.ServerProxy;
 import net.minecraft.block.Block;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
+import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
@@ -56,7 +56,8 @@ public class ParkourMod
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event){
             event.getRegistry().register(new ParkourBoots());
-            MinecraftForge.EVENT_BUS.register(new ParkourModEventHandler());
+            //MinecraftForge.EVENT_BUS.register(new ClientHandler());
+            MinecraftForge.EVENT_BUS.register(new ParkourModPacketHandler());
         }
     }
 }

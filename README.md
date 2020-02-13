@@ -253,4 +253,4 @@ Info about equiped armor
      0 = {ItemStack@15891} "1 parkourboots"
      1 = {ItemStack@15820} "1 air"
      2 = {ItemStack@15820} "1 air"
-     3 = {ItemStack@15820} "1 air"
+     3 = {ItemStack@15820} "1 air" 
